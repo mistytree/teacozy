@@ -1,4 +1,5 @@
-body {
+body,
+.locations {
   font-family: Helvetica;
   font-size: 22px;
   color: Seashell;
@@ -44,6 +45,13 @@ header {
 /* BODY Section */
 
 .body-container {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;  /* Centering .body-container */
+  right: 0;
+  z-index: 1;
+
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -63,7 +71,8 @@ header {
 
 .our-mission h2,
 .our-mission h4 {
-  margin-bottom: -30px;
+  margin-bottom: 0;    /* Removing gap and text vertical centering */
+  margin-top: 0;       /* Removing gap and text vertical centering */
   padding: 10px;
   background-color: black;
 }
@@ -109,11 +118,58 @@ header {
 
 .locations {
   background-image: url("../images/img-locations-background.jpg");
-  background-size: 1200px 500px;
+  background-size: cover;
   width: 1200px;
   height: 500px;
+  text-align: center;
+  position: relative;  /* Need to declare to position properly 'Locations' text later */
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
-footer {
-  
+.locations-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-box,
+.center-box,
+.right-box {
+  width: 300px;
+  height: auto;
+  text-align: center;
+
+  background: black;
+  opacity: 1;
+  margin: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.locations h4 {
+  font-weight: normal;
+}
+
+.locations-text {
+  font-weight: bold;
+  position: absolute;
+  top: 28px;      /* 68px sits right on top of black box so 53px would be */
+  right: 522px;   /* required 15px above, but 40px above just looks better */
+
+}
+
+/* FOOTER Section */
+
+.footer-center-text {
+ height: 200px;
+ text-align: center;
+}
+
+.footer-bottom-left-text {
+  margin-left: 20px;
+  align-self: left;
 }
