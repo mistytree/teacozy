@@ -1,5 +1,4 @@
-body,
-.locations {
+body {
   font-family: Helvetica;
   font-size: 22px;
   color: Seashell;
@@ -28,7 +27,7 @@ header {
   }
 
 .nav-bar a {
-  color: Seashell;
+  color: Seashell;      /* Hypertext color to 'Seashell' */
   padding-left: 20px;
 }
 
@@ -46,9 +45,9 @@ header {
 
 .body-container {
   display: block;
-  position: absolute;
+  position: absolute;  /* Works without 'display' and 'position' too */
   top: 70px;
-  left: 0;  /* Centering .body-container */
+  left: 0;            /* Centering .body-container */
   right: 0;
   z-index: 1;
 
@@ -71,8 +70,8 @@ header {
 
 .our-mission h2,
 .our-mission h4 {
-  margin-bottom: 0;    /* Removing gap and text vertical centering */
-  margin-top: 0;       /* Removing gap and text vertical centering */
+  margin-bottom: 0;    /* Removing gap and vertical centering of text*/
+  margin-top: 0;       /* Removing gap and vertical centering of text*/
   padding: 10px;
   background-color: black;
 }
@@ -132,7 +131,6 @@ header {
 .locations-boxes {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .left-box,
@@ -145,9 +143,6 @@ header {
   background: black;
   opacity: 1;
   margin: 20px;
-
-  display: flex;
-  align-items: center;
 }
 
 .locations h4 {
@@ -155,11 +150,9 @@ header {
 }
 
 .locations-text {
-  font-weight: bold;
   position: absolute;
   top: 28px;      /* 68px sits right on top of black box so 53px would be */
   right: 522px;   /* required 15px above, but 40px above just looks better */
-
 }
 
 /* FOOTER Section */
